@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.logo > img {
+  width: 45px;
+}
+
+.logo > p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.userBtn {
+  border-radius: 100%;
+  padding: 0.5em;
+}
+
+.userBtn > svg {
+  width: 25px;
+  height: 25px;
+}
+
+@media (min-width: 700px) {
+  .logo > img {
+    width: 79px;
+  }
+
+  .logo > p {
+    font-size: 2rem;
+  }
+
+  .userBtn > svg {
+    width: 40px;
+    height: 40px;
+  }
+}

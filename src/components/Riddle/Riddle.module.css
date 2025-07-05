@@ -1,0 +1,134 @@
+.riddleCard,
+.answerCard {
+  background-color: var(--dark-blue);
+  border-bottom: 8px solid var(--dark-blue-border);
+  border-radius: 10px;
+  margin-top: 0.4em;
+}
+
+.riddleCard {
+  padding: 1em;
+  margin-bottom: 0.75em;
+}
+
+.riddleBox {
+  margin-top: 1em;
+}
+
+.riddleBox > h2,
+.riddleBox > h3 {
+  font-size: 1.25rem;
+}
+
+.riddleCard > ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.riddleBtns > button {
+  max-width: none;
+}
+
+.riddleCard > ul > li {
+  list-style-type: disc;
+  margin-left: 1.2em;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clue {
+  background-color: var(--cobalt-blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.clue > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.clueBtn {
+  background: var(--blue-gradient);
+  border-bottom: 4px solid var(--blue-border);
+  margin-bottom: 0.75em;
+}
+
+.clueBtn:hover {
+  background: none;
+  background-color: var(--blue-gradient-hover);
+}
+
+.riddleBox > h3 {
+  margin-top: 0.75em;
+}
+
+.answerCard {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.75em;
+}
+
+@media (min-width: 700px) {
+  .riddleCard {
+    padding: 2em;
+    font-size: 1.25em;
+  }
+
+  .riddleBox > h2,
+  .riddleBox > h3 {
+    font-size: 1.5rem;
+  }
+
+  .riddleCard > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  .clueBtn {
+    margin-bottom: 0;
+  }
+  .riddleBtns {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  .answerCard {
+    padding: 0.5em;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .riddleCard > ul {
+    grid-template-columns: 1fr;
+  }
+
+  .riddleBox {
+    width: 50%;
+  }
+
+  .riddleCard {
+    font-size: 1.5rem;
+  }
+}

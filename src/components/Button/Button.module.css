@@ -1,0 +1,32 @@
+.primaryBtn {
+  background: var(--pink-gradient);
+  border: none;
+  border-bottom: 4px solid var(--pink-border);
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.45em 2em;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 341px;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  background: none;
+  background-color: var(--pink-gradient-hover);
+}
+
+.normalBtn {
+  background-color: var(--cobalt-blue);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.normalBtn:hover {
+  background-color: var(--cobalt-blue-hover);
+}

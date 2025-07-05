@@ -1,0 +1,10 @@
+.mainGame {
+  padding: 1em;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    display: flex;
+    gap: 2em;
+  }
+}

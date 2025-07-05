@@ -1,0 +1,134 @@
+.dashboard {
+  margin-top: 1.25em;
+}
+
+.dashboard > h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  border-bottom: 8px solid var(--dark-blue-border);
+  border-radius: 10px;
+  padding: 1em;
+  overflow-y: scroll;
+}
+
+.card > p {
+  margin-bottom: 1.5em;
+}
+
+.header {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+
+.header > p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header > p:first-child {
+  text-align: left;
+  width: 33%;
+}
+
+.header > p:last-child {
+  text-align: right;
+  width: 33%;
+}
+
+.content {
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.buttons > button {
+  width: 100%;
+}
+
+.addPlayer {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-bottom: 1em;
+}
+
+.addPlayer > label {
+  font-weight: 500;
+  flex: 0 0 80px;
+}
+
+.addPlayer > input {
+  background-color: var(--cobalt-blue);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em;
+  flex: 1 1 0%;
+  min-width: 0;
+  color: white;
+}
+
+.addPlayer > input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.addPlayer > input:hover,
+.addPlayer > input:focus {
+  border: 1px solid var(--cobalt-blue-hover);
+}
+
+@media (min-width: 700px) {
+  .header,
+  .addPlayer {
+    font-size: 1.25rem;
+  }
+
+  .addPlayer > label {
+    flex: 0 0 100px;
+  }
+
+  .dashboard > h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 2em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .dashboard {
+    width: 50%;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    height: 614px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0;
+  }
+
+  .buttons {
+    margin-top: auto;
+  }
+}

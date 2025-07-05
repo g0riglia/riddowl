@@ -1,0 +1,122 @@
+.player {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 0.8em;
+}
+
+.player > p,
+.player > form {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.player > p:first-child,
+.player > form:first-child {
+  text-align: left;
+  width: 33%;
+}
+
+.player > p:last-child,
+.player > form:last-child {
+  text-align: right;
+  width: 33%;
+}
+
+.player > button {
+  padding: 0.25em 0.7em;
+}
+
+.player > .scoreCell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.score,
+.scoreCell {
+  font-weight: 700;
+}
+
+.scoreCell > span {
+  margin: 0 0.5em;
+}
+
+.scoreCell > button {
+  padding: 0.1em 0.6em;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 0.35em;
+  justify-content: flex-end;
+}
+
+.iconBtn {
+  padding: 0.5em;
+}
+
+.iconBtn > svg {
+  width: 19px;
+  height: 19px;
+}
+
+.player input {
+  background-color: var(--cobalt-blue);
+  border: 1px solid var(--cobalt-blue-hover);
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  max-width: 200px;
+}
+
+.player input:focus {
+  outline: none;
+  border-color: var(--cobalt-blue-hover);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.player form {
+  margin: 0;
+  padding: 0;
+}
+
+.nameForm {
+  display: table-cell;
+  text-align: left;
+  width: 33%;
+  vertical-align: middle;
+}
+
+@media (min-width: 700px) {
+  .player > p,
+  .player > form,
+  .score {
+    font-size: 1.25rem;
+  }
+
+  .iconBtn > svg {
+    width: 21.6px;
+    height: 21.6px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .player > p,
+  .player > form {
+    font-size: 1.5rem;
+  }
+
+  .iconBtn > svg {
+    width: 25.6px;
+    height: 25.6px;
+  }
+}
