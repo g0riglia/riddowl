@@ -40,7 +40,6 @@
   border-radius: 4px;
   padding: 0.25em 0.5em;
   color: white;
-  width: 400px;
 }
 
 .form > input::placeholder {
@@ -124,4 +123,10 @@
 .registerBtn:disabled:focus {
   text-decoration: none;
   color: white;
+}
+
+@media (min-width: 500px) {
+  .form > input {
+    width: 400px;
+  }
 }
