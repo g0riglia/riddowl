@@ -1,74 +1,90 @@
-# Getting Started with Create React App
+# 🦉 Riddowl
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Riddowl** is a riddle-based web app powered by **AI-generated riddles** that change every time you play.  
+Each riddle is revealed **progressively in four parts**, creating suspense with smooth transitions.  
+Players are tracked in a personal **dashboard** where you can manage participants, assign victories, and save changes linked to your account.
 
-To install all the dependencies, run:
+---
 
-### `npm i`
+## 🔗 Live Demo
 
-## Available Scripts
+👉 [Try Riddowl on Netlify](https://riddowl.netlify.app)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🧠 **AI-generated riddles** – different every time
+- 🎯 **Progressive reveal** – 4-line riddles shown one by one
+- 🔐 **Authentication** – create and log in to your own account
+- 🧑‍💻 **Custom dashboard** per user:
+  - Add, edit, and remove participants
+  - Assign wins and track scores
+  - Save or discard changes
+  - Data is linked to your account and persists
+- 📦 All data is stored securely in **Firebase Firestore**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** (built with Create React App)
+- **Firebase** (Authentication + Firestore)
+- **Netlify** for deployment
+- **Plain CSS** for styling
+- **Environment Variables** to protect API keys
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Local Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to run the project locally.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/g0riglia/riddowl.git
+cd riddowl
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install the dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Create a `.env` file
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the root directory, create a `.env` file and add your Firebase credentials:
 
-## Learn More
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> 🔒 Do not share this file publicly or push it to GitHub. It is ignored by `.gitignore`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Run the development server
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The app will be available at [http://localhost:3000](http://localhost:3000)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🙌 Credits
 
-### Making a Progressive Web App
+Created by **g0riglia**  
+All riddles, design, and logic are original.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📜 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the **MIT License**.
