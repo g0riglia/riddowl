@@ -93,6 +93,13 @@ function Dashboard() {
     }
   }, [user?.uid, dispatch]);
 
+  // Auto-save when dashboard data changes (but not in edit mode)
+  useEffect(() => {
+    if (!editMode && dashboardData.length > 0 && user?.uid) {
+      saveDashboard(user.uid, dashboardData);
+    }
+  }, [dashboardData, editMode, user?.uid]);
+
   function handleEnterEditMode() {
     setCurrentState(dashboardData);
     setEditMode(true);
