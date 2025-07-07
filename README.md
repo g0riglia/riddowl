@@ -64,11 +64,25 @@ REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 REACT_APP_FIREBASE_APP_ID=your_app_id
+REACT_APP_ANTHROPIC_API_KEY=your_anthropic_api_key
 ```
 
 > 🔒 Do not share this file publicly or push it to GitHub. It is ignored by `.gitignore`.
 
-### 4. Run the development server
+### 4. Get your Anthropic API key
+
+To generate AI riddles, you'll need an Anthropic API key:
+
+1. Go to [Anthropic Console](https://console.anthropic.com/)
+2. Sign up or log in to your account
+3. Navigate to "API Keys" in the sidebar
+4. Click "Create Key" and give it a name
+5. Copy the generated API key
+6. Add it to your `.env` file as `REACT_APP_ANTHROPIC_API_KEY`
+
+> ⚠️ **Important**: Keep your API key secure and never expose it in client-side code for production apps. For this demo, it's included in the frontend for simplicity.
+
+### 5. Run the development server
 
 ```bash
 npm start
