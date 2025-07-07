@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.container > h2 {
+  font-size: 1.25em;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  border-bottom: 8px solid var(--dark-blue-border);
+  display: flex;
+  gap: 0.7em;
+  justify-content: space-between;
+  padding: 0.6em 0.9em;
+}
+
+.card > button {
+  width: 100%;
+  font-weight: 400;
+}
+
+button.selected {
+  background-color: var(--cobalt-blue-hover);
+  font-weight: 600;
+}
+
+@media (min-width: 700px) {
+  .container > h2 {
+    font-size: 1.5em;
+  }
+
+  .card {
+    font-size: 1.25em;
+  }
+}

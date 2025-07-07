@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styles from "./Riddle.module.css";
 import { ReactComponent as IconEyeClosed } from "../../assets/icon-eye-closed.svg";
 import Button from "../Button";
+import DifficultySelector from "../DifficultySelector";
 import getRandomRiddle from "../../utils/getRandomRiddle";
 
 const RIDDLE = {
@@ -20,6 +21,22 @@ function Riddle({ generateNewRiddle }) {
   const [currentRiddle, setCurrentRiddle] = useState(RIDDLE);
   const [loading, setLoading] = useState(false);
   const [generateRiddle, setGenerateRiddle] = useState(generateNewRiddle);
+  const [selectedDifficulty, setSelectedDifficulty] = useState("Medium");
+
+  const handleGenerateRiddle = useCallback(async () => {
+    setLoading(true);
+    try {
+      const newRiddle = await getRandomRiddle(selectedDifficulty);
+      setCurrentRiddle(newRiddle);
+      setCluesShown(0);
+      setShowAnswer(false);
+    } catch (error) {
+      console.error("Failed to generate riddle:", error);
+      // Keep the current riddle if generation fails
+    } finally {
+      setLoading(false);
+    }
+  }, [selectedDifficulty]);
 
   // Use useEffect to handle the generate riddle prop
   useEffect(() => {
@@ -27,7 +44,7 @@ function Riddle({ generateNewRiddle }) {
       setGenerateRiddle(false);
       handleGenerateRiddle();
     }
-  }, [generateRiddle]);
+  }, [generateRiddle, handleGenerateRiddle]);
 
   function handleNextClue() {
     const nextClue = cluesShown + 1;
@@ -39,21 +56,6 @@ function Riddle({ generateNewRiddle }) {
 
   function handleShowAnswer() {
     setShowAnswer(true);
-  }
-
-  async function handleGenerateRiddle() {
-    setLoading(true);
-    try {
-      const newRiddle = await getRandomRiddle();
-      setCurrentRiddle(newRiddle);
-      setCluesShown(0);
-      setShowAnswer(false);
-    } catch (error) {
-      console.error("Failed to generate riddle:", error);
-      // Keep the current riddle if generation fails
-    } finally {
-      setLoading(false);
-    }
   }
 
   return (
@@ -98,6 +100,10 @@ function Riddle({ generateNewRiddle }) {
           <div className={styles.answerCard}>{currentRiddle.answer}</div>
         </>
       )}
+      <DifficultySelector
+        selectedDifficulty={selectedDifficulty}
+        setSelectedDifficulty={setSelectedDifficulty}
+      />
     </section>
   );
 }
