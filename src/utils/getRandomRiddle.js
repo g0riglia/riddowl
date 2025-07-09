@@ -39,7 +39,6 @@ async function getRandomRiddle(difficulty = "Medium") {
         },
       ],
     });
-    console.log(response.json);
 
     const content = response.content[0].text;
 

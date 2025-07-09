@@ -101,6 +101,7 @@ function Riddle({ generateNewRiddle }) {
         </>
       )}
       <DifficultySelector
+        difficulties={["Easy", "Medium", "Hard"]}
         selectedDifficulty={selectedDifficulty}
         setSelectedDifficulty={setSelectedDifficulty}
       />
